@@ -1,0 +1,6 @@
+ROLLNAME	= chm
+VERSION		= 1.0
+RELEASE		= 0
+COLOR		= dodgerblue
+
+REDHAT.ROOT	= $(CURDIR)
