@@ -1,0 +1,15 @@
+VERSION.MK.MASTER = $(REDHAT.ROOT)/src/chm/version.mk
+VERSION.MK.INCLUDE = chm.version.mk
+include $(VERSION.MK.INCLUDE) 
+
+PACKAGE     = chm
+CATEGORY    = applications
+NAME        = $(PACKAGE)-module
+VERSION     = $(CHMVER)
+RELEASE     = 0
+PKGROOT     = /opt/modulefiles/$(CATEGORY)/$(PACKAGE)
+
+CHMDIR   = /opt/chm
+
+RPM.REQUIRES    = environment-modules
+RPM.EXTRAS  = AutoReq:No

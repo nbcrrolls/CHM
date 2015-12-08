@@ -18,6 +18,7 @@
 	</changelog>
 
 	<package>chm</package>
+	<package>chm-module</package>
 	<package>rocks-chm</package>
 
 </kickstart>

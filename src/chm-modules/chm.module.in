@@ -1,0 +1,7 @@
+#%Module1.0
+module-whatis "chm"
+module-whatis "Version: @VERSION@"
+prepend-path PATH @CHMDIR@
+prepend-path MANPATH @CHMDIR@/share/man
+
+module load matlab
