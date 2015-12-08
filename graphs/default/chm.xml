@@ -19,5 +19,6 @@
 	</changelog>
 
 	<!-- add edges here -->
+	<edge from="client" to="chm"/>
 
 </graph>

@@ -1,5 +1,7 @@
-PKGROOT		= /opt/chm
-NAME        = test
-VERSION     = 1.0
-RELEASE 	= 1
-TARBALL_POSTFIX	= tgz
+PKGROOT	= /opt/chm
+NAME        = chm
+VERSION     = 2.1.367
+RELEASE 	= 0
+TARBALL_POSTFIX	= tar.gz
+
+RPM.EXTRAS = "AutoReq: no"

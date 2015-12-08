@@ -62,19 +62,11 @@ include Rules.mk
 
 
 build:
-	gunzip -c $(NAME)-$(VERSION).$(TARBALL_POSTFIX) | $(TAR) -xf -
-	( 							\
-		cd $(NAME)-$(VERSION);				\
-		./configure --prefix=$(PKGROOT)/$(NAME);	\
-		$(MAKE);					\
-	)
+	gunzip -c $(NAME)-source-$(VERSION).$(TARBALL_POSTFIX) | $(TAR) -xf -
 	
 install::
 	mkdir -p $(ROOT)/$(PKGROOT)/$(NAME)
-	(							\
-		cd $(NAME)-$(VERSION);				\
-		$(MAKE) prefix=$(ROOT)/$(PKGROOT)/$(NAME) install;\
-	)
+	mv  $(NAME)-source-$(VERSION)/* $(ROOT)/$(PKGROOT)
 
 clean::
-	rm -rf $(NAME)-$(VERSION)
+	rm -rf $(NAME)-source-$(VERSION)
