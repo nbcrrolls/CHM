@@ -16,8 +16,6 @@ M. Seyedhosseini, M. Sajjadi, and T. Tasdizen. "Image Segmentation with Cascaded
 
 ### Building the roll
 
-### CHM License
-
 **Dependencies**
 
 * The matlab roll must be installed on hosts that run this application
