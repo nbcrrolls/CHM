@@ -1,0 +1,12 @@
+# build directory
+RPMS/
+SOURCES/
+BUILD/
+SPECS/
+disk*/
+*.iso
+
+_os
+_arch
+_distribution
+.rpmmacros
