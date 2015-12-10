@@ -10,3 +10,13 @@ _os
 _arch
 _distribution
 .rpmmacros
+
+# ignore version, rules  files
+python.mk
+Rules-*.mk
+Rules.mk
+Rolls.mk
+roll*.mk
+rocks-*.mk
+src/chm/chm.spec
+src/chm/chm.spec.mk
