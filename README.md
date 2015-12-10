@@ -27,10 +27,10 @@ A successful build will create the file chm-*.disk1.iso
 To install, execute these instructions on a Rocks frontend:
 
 ```Bash
-# rocks add roll *.iso
-# rocks enable roll chm
-# (cd /export/rocks/install; rocks create distro)
-# rocks run roll chmd | bash
+rocks add roll *.iso
+rocks enable roll chm
+(cd /export/rocks/install; rocks create distro)
+rocks run roll chmd | bash
 ```
 
 ### What is installed
@@ -49,6 +49,7 @@ The roll installs chm and a configuration file in:
 
 ### CHM License
 
+Bash ```
 Copyright (c) 2013,
 All rights reserved.
 
@@ -73,3 +74,4 @@ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
 CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
+```
