@@ -67,6 +67,7 @@ build:
 install::
 	mkdir -p $(ROOT)/$(PKGROOT)/$(NAME)
 	mv  $(NAME)-source-$(VERSION)/* $(ROOT)/$(PKGROOT)
+	cp -r test $(ROOT)/$(PKGROOT)/
 
 clean::
 	rm -rf $(NAME)-source-$(VERSION)
