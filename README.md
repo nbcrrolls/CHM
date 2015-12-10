@@ -49,7 +49,7 @@ The roll installs chm and a configuration file in:
 
 ### CHM License
 
-Bash ```
+```Bash
 Copyright (c) 2013,
 All rights reserved.
 
