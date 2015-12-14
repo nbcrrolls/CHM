@@ -45,6 +45,105 @@ The roll installs chm and a configuration file in:
 
 ### Testing
 
+Once installed this roll can be tested by running **/opt/chm/test_chm_install.sh** script.  This script will
+run the two main programs for chm **CHM_train.sh** and **CHM_test.sh** and verify they generate output and don't
+fail.  If successful, script exits with 0 exit code and success message.  
+Warning: Accuracy of the answer is not checked.
+
+Example of test:
+```Bash
+$ /opt/chm/test_chm_install.sh 
+
+Running test of chm programs CHM_train.sh and CHM_test.sh (5 minutes)
+
+Creating /tmp/testchm0d783641-c584-4814-b6fc-2727673df30e
+
+If this script fails the directory may need to be removed manually
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2015 The MathWorks, Inc.
+                   R2015a (8.5.0.197613) 64-bit (glnxa64)
+                             February 12, 2015
+
+ 
+For online documentation, see http://www.mathworks.com/support
+For product information, visit www.mathworks.com.
+ 
+
+	Academic License
+
+Extracting features ... stage 1 level 0 
+Start learning LDNN ... stage 1 level 0 
+Run clustering...Done. It took 0.198802  
+Number of training samples = 19000 
+Epoch No. 1 ... error = 0.132816 
+Epoch No. 2 ... error = 0.109392 
+Epoch No. 3 ... error = 0.101695 
+Epoch No. 4 ... error = 0.096493 
+Epoch No. 5 ... error = 0.092175 
+Epoch No. 6 ... error = 0.088537 
+Epoch No. 7 ... error = 0.085437 
+Epoch No. 8 ... error = 0.082890 
+Epoch No. 9 ... error = 0.080423 
+Epoch No. 10 ... error = 0.078288 
+Epoch No. 11 ... error = 0.076422 
+Epoch No. 12 ... error = 0.074477 
+Epoch No. 13 ... error = 0.072888 
+Epoch No. 14 ... error = 0.071441 
+Epoch No. 15 ... error = 0.069973 
+Generating outputs ... stage 1 level 0 
+Extracting features ... stage 1 level 1 
+Start learning LDNN ... stage 1 level 1 
+Run clustering...Done. It took 0.021572  
+Number of training samples = 4800 
+Epoch No. 1 ... error = 0.147928 
+Epoch No. 2 ... error = 0.132322 
+Epoch No. 3 ... error = 0.131052 
+Epoch No. 4 ... error = 0.125102 
+Epoch No. 5 ... error = 0.123495 
+Epoch No. 6 ... error = 0.123825 
+Epoch No. 7 ... error = 0.121625 
+Epoch No. 8 ... error = 0.123061 
+Epoch No. 9 ... error = 0.120772 
+Epoch No. 10 ... error = 0.117798 
+Epoch No. 11 ... error = 0.118322 
+Epoch No. 12 ... error = 0.117683 
+Epoch No. 13 ... error = 0.113678 
+Epoch No. 14 ... error = 0.113840 
+Epoch No. 15 ... error = 0.115216 
+Generating outputs ... stage 1 level 1 
+Extracting features ... stage 2 level 0 
+Start learning LDNN ... stage 2 level 0 
+Run clustering...Done. It took 0.309186  
+Number of training samples = 19000 
+Epoch No. 1 ... error = 0.109606 
+Epoch No. 2 ... error = 0.106958 
+Epoch No. 3 ... error = 0.105982 
+Epoch No. 4 ... error = 0.105314 
+Epoch No. 5 ... error = 0.104796 
+Epoch No. 6 ... error = 0.104333 
+Generating outputs ... stage 2 level 0 
+Running << CHM_train('/opt/chm/test/trainimages/*.png','/opt/chm/test/trainlabels/*.png','./temp/',2,1,0); >> took 146.434537 seconds
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2015 The MathWorks, Inc.
+                   R2015a (8.5.0.197613) 64-bit (glnxa64)
+                             February 12, 2015
+
+ 
+For online documentation, see http://www.mathworks.com/support
+For product information, visit www.mathworks.com.
+ 
+
+	Academic License
+
+Running << CHM_test('/opt/chm/test/trainimages/1.png','/tmp/testchm0d783641-c584-4814-b6fc-2727673df30e','auto',[0 0],'./temp',[],'true'); >> took 5.941403 seconds
+
+Tests run successfully
+
+Removing /tmp/testchm0d783641-c584-4814-b6fc-2727673df30e
+
+```
 
 
 ### CHM License
