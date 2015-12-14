@@ -65,9 +65,10 @@ build:
 	gunzip -c $(NAME)-source-$(VERSION).$(TARBALL_POSTFIX) | $(TAR) -xf -
 	
 install::
-	mkdir -p $(ROOT)/$(PKGROOT)/$(NAME)
+	mkdir -p $(ROOT)/$(PKGROOT)
 	mv  $(NAME)-source-$(VERSION)/* $(ROOT)/$(PKGROOT)
 	cp -r test $(ROOT)/$(PKGROOT)/
+	cp test_chm_install.sh $(ROOT)/$(PKGROOT)/
 
 clean::
 	rm -rf $(NAME)-source-$(VERSION)
