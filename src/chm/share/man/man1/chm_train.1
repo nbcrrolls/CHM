@@ -1,0 +1,80 @@
+.TH CHM_TRAIN 1
+.\"
+.de M           \" man page reference
+\\fI\\$1\\fR\\|(\\$2)\\$3
+..
+.SH NAME
+.B CHM_train.sh \- Cascaded Hierarchical Model training program
+.SH SYNOPSIS
+.BR CHM_train.sh
+<INPUTS> <LABELS> [ options ]
+.SH DESCRIPTION
+.B Cascaded Hierarchical Model Training program trains an image
+segmentation classifier which can be used to segment features from
+an image by the 
+.M chm_test 1
+program.
+.PP
+For more information see:
+.M chm 1
+or
+.M chm_test 1
+.PP
+or <https://www.sci.utah.edu/software/chm.html>
+.SH <INPUTS> <LABELS>
+.TP
+.BR <INPUTS>
+The raw image files to use.
+.TP
+.BR <LABELS>
+The label / ground truth images (1=feature, 0=background)
+.PP
+The file names need not line up, but there must be equal amounts of inputs and
+labels. They are matched up in the order they are given. If using a folder or
+wildcard input the order may not be completely predictable, but most systems
+will put these in lexographic order. The files can be specified in multiple
+ways. It needs to be one of the these or a comma-separated list of these:
+.TP
+* path to a folder
+all PNGs and TIFFs in that folder
+.TP
+* path to a file
+only that file 
+.TP
+* path with numerical pattern
+get all files matching the pattern pattern must have #s in it and end 
+with a semicolon and number range
+the #s are replaced by the values at the end with leading zeros
+example: in/####.png;5-15 would do in/0005.png through in/0015.png.
+Note: the semicolon needs to be escaped or in double quotes in some shells
+.TP
+* path with wildcard pattern
+get all files matching the pattern
+pattern has * in it which means any number of any characters
+example: in/lbl_*.tif does all TIFF images starting with lbl_ in in. 
+Note: the asterisk needs to be escaped or in double quotes in some shells
+.SH OPTIONS
+.TP
+.BR \-m " " \fImodel_folder\fR
+The folder that contains the model data. Default is ./temp/.
+(contains param.mat and MODEL_level#_stage#.mat)
+.TP
+.BR \-S " " \fINstage\fR
+The number of stages of training to perform. Must be >=2.
+Default is 2.
+.TP
+.BR \-L " " \fINlevel\fR
+The number of levels of training to perform. Must be >=1.
+Default is 4.
+.TP
+.BR \-r
+Restart a failed training attempt. This will restart just
+after the last copmleted stage/level. You must give the same
+parameters (data, labels, ...) as before for the model to
+make sense.
+.TP
+.BR \-s
+Single-thread / non-parallel. Normally one small step of this
+is done in parallel using all available physical cores.
+.SH COPYRIGHT
+Copyright: 2013, the University of Utah

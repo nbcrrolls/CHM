@@ -69,6 +69,7 @@ install::
 	mv  $(NAME)-source-$(VERSION)/* $(ROOT)/$(PKGROOT)
 	cp -r test $(ROOT)/$(PKGROOT)/
 	cp test_chm_install.sh $(ROOT)/$(PKGROOT)/
+	cp -r share $(ROOT)/$(PKGROOT)/
 
 clean::
 	rm -rf $(NAME)-source-$(VERSION)

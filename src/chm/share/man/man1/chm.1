@@ -1,0 +1,34 @@
+.TH CHM 1
+.\"
+.de M           \" man page reference
+\\fI\\$1\\fR\\|(\\$2)\\$3
+..
+.SH NAME
+.B CHM \- Cascaded Hierarchical Model
+.SH DESCRIPTION
+.B Cascaded Hierarchical Model 
+is an image segmentation framework, which learns contextual information 
+in a hierarchical framework. At each level of the hierarchy, a 
+classifier is trained based on downsampled input image and outputs of 
+previous levels. Our model then incorporates the resulting 
+multi-resolution contextual information into a classifier to segment 
+the input image at original resolution. We repeat this procedure by 
+cascading the hierarchical framework to improve the segmentation 
+accuracy.
+.PP
+For more information go to:
+.PP
+<https://www.sci.utah.edu/software/chm.html>
+.SH USER INTERFACE
+CHM consists of two main programs which are described separately
+.TP
+.M chm_train 1
+.I CHM_train.sh
+trains the classifier to generate what is known as a trained model
+.TP
+.M chm_test 1
+.I CHM_test.sh
+uses the trained model to run classification on an input image
+
+.SH COPYRIGHT
+Copyright: 2013, the University of Utah
