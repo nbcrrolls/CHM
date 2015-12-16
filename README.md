@@ -30,7 +30,7 @@ To install, execute these instructions on a Rocks frontend:
 rocks add roll *.iso
 rocks enable roll chm
 (cd /export/rocks/install; rocks create distro)
-rocks run roll chmd | bash
+rocks run roll chm | bash
 ```
 
 ### What is installed
