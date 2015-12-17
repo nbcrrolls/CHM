@@ -1,3 +1,5 @@
+[matlab]: https://github.com/nbcrrolls/matlab
+[nbcr]: https://github.com/nbcrrolls/nbcr
 # CHM Roll
 
 This roll installs Cascaded Hierarchical Model (CHM) 
@@ -18,7 +20,8 @@ M. Seyedhosseini, M. Sajjadi, and T. Tasdizen. "Image Segmentation with Cascaded
 
 **Dependencies**
 
-* The matlab roll must be installed on hosts that run this application
+* The [matlab][matlab] roll must be installed on hosts that run this application
+* The [nbcr][nbcr] roll must be installed on hosts and on the node that builds this roll
 
 A successful build will create the file chm-*.disk1.iso
 
@@ -30,7 +33,7 @@ To install, execute these instructions on a Rocks frontend:
 rocks add roll *.iso
 rocks enable roll chm
 (cd /export/rocks/install; rocks create distro)
-rocks run roll chmd | bash
+rocks run roll chm | bash
 ```
 
 ### What is installed
