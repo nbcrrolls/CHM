@@ -1,5 +1,5 @@
-matlab: https://github.com/nbcrrolls/matlab
-nbcr: https://github.com/nbcrrolls/nbcr
+[matlab]: https://github.com/nbcrrolls/matlab
+[nbcr]: https://github.com/nbcrrolls/nbcr
 # CHM Roll
 
 This roll installs Cascaded Hierarchical Model (CHM) 
