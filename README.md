@@ -19,6 +19,7 @@ M. Seyedhosseini, M. Sajjadi, and T. Tasdizen. "Image Segmentation with Cascaded
 **Dependencies**
 
 * The matlab roll must be installed on hosts that run this application
+* The nbcr roll must be installed on hosts and on the node that builds this roll
 
 A successful build will create the file chm-*.disk1.iso
 
