@@ -1,2 +1,2 @@
 NAME    = rocks-chm
-RELEASE = 0
+RELEASE = 1
